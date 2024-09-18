@@ -5,25 +5,28 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=./", 
+    "build": "vite build --base=./",
     "preview": "vite preview"
   },
   "devDependencies": {
     "glob": "^8.1.0",
     "mini-css-extract-plugin": "^2.7.7",
-    "sass-loader": "^14.0.0",
+    "sass": "^1.79.1",
+    "sass-loader": "^16.0.1",
     "vite": "^4.0.5",
-    "vite-plugin-sass": "^0.1.0",
     "webpack": "^5.90.0",
     "webpack-cli": "^5.1.4"
   },
   "author": "Andrii Dmytriv",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "accordion-js": "^3.3.4",
     "i": "^0.3.7",
+    "imask": "^7.6.1",
     "npm": "^10.7.0",
-    "sass": "^1.72.0",
     "vite-plugin-full-reload": "^1.0.5",
-    "vite-plugin-html-inject": "^1.0.1"
+    "vite-plugin-html-inject": "^1.0.1",
+    "vite-plugin-sass": "^0.1.0"
   }
 }

@@ -1,0 +1,198 @@
+.embeded {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: var(--cm);
+
+  & > * {
+    margin-top: 1.5em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+      border-bottom: none !important;
+    }
+  }
+
+  a {
+    text-decoration: underline !important;
+    text-underline-position: under;
+    text-decoration-thickness: 1px !important;
+  }
+
+  b {
+    display: block;
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 1.556em;
+    margin-top: 1.5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 2.188em;
+    line-height: 1.2em;
+    margin-top: 1.429em;
+    margin-bottom: 0.743rem;
+  }
+  h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+  }
+  h3 {
+    font-size: 1.813em;
+    line-height: 1.31em;
+    margin-top: 1.586em;
+    margin-bottom: 0.759em;
+  }
+  h4 {
+    font-size: 1.625em;
+    line-height: 1.385em;
+    margin-top: 1.692em;
+    margin-bottom: 0.769em;
+  }
+  h5 {
+    font-size: 1.5em;
+    line-height: 1.417em;
+    margin-top: 1.75em;
+    margin-bottom: 0.75em;
+  }
+  h6 {
+    font-size: 1.375em;
+    line-height: 1.455em;
+    margin-top: 1.818em;
+    margin-bottom: 0.727em;
+  }
+
+  b {
+    margin-top: 1.5rem;
+    display: block;
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 1.556em;
+  }
+
+  ul {
+    margin-left: 1em;
+
+    li {
+      margin-bottom: 1em;
+      margin-left: 0.5em;
+      list-style: disc;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ol {
+    padding-left: 1em;
+    margin-left: 0;
+
+    li {
+      margin-bottom: 0.5em;
+      list-style: decimal;
+      margin-left: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .wp-block-image,
+  .wp-block-video,
+  .wp-block-embed {
+    margin: 2.5em 0;
+    width: 100%;
+
+    &.is-resized {
+      img,
+      video,
+      iframe {
+        width: 100% !important;
+      }
+    }
+
+    &.aligncenter {
+      img,
+      video,
+      iframe {
+        margin: 0 auto;
+      }
+    }
+
+    &.alignright {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    img,
+    video,
+    iframe {
+      max-width: 100% !important;
+      display: block;
+      height: auto !important;
+    }
+
+    .wp-block-embed__wrapper {
+      padding-top: calc(100% / 16 * 9);
+      position: relative;
+    }
+
+    iframe {
+      width: 100% !important;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      height: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .embeded {
+    font-size: 0.875em;
+    line-height: 1.429em;
+
+    b {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    h1 {
+      font-size: 1.188em;
+      line-height: 1.526em;
+    }
+    h2 {
+      font-size: 1.125em;
+      line-height: 1.556em;
+    }
+    h3 {
+      font-size: 1.063em;
+      line-height: 1.588em;
+    }
+    h4,
+    h5,
+    h6 {
+      font-size: 1em;
+      line-height: 1.625em;
+    }
+  }
+}
