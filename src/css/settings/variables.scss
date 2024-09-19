@@ -1,8 +1,13 @@
 body {
   /* Colors */
   --cm: #100405;
+  --cq: #f2f2f2;
+  --cw: #fff;
   --cy: #fed104;
 
   /* Fonts */
   --ff: "Montserrat", sans-serif;
+
+  /* Icons */
+  --btnVector: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M9.94286 12H12V0H0V2.13793H8.43429L0 10.5517L1.57714 12L9.94286 3.65517V12Z' fill='%23100405'/%3E%3C/svg%3E");
 }

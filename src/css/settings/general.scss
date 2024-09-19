@@ -15,10 +15,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: clip;
 }
 
-.container {
+[class*="__container"] {
   max-width: 85rem;
   padding: 0 2.5em;
   margin: 0 auto;
@@ -36,7 +36,7 @@ body {
   body {
     font-size: 16px;
   }
-  .container {
+  [class*="__container"] {
     padding: 0 1.25em;
   }
 }
@@ -53,7 +53,7 @@ body {
   body {
     font-size: 16px;
   }
-  .container {
+  [class*="__container"] {
     padding: 0 29px;
   }
 }
