@@ -18,6 +18,11 @@ body {
   overflow: clip;
 }
 
+.main {
+  flex: 1 1 auto;
+  padding-bottom: 6.25rem;
+}
+
 [class*="__container"] {
   max-width: 85rem;
   padding: 0 2.5em;
@@ -36,8 +41,13 @@ body {
   body {
     font-size: 16px;
   }
+
   [class*="__container"] {
     padding: 0 1.25em;
+  }
+
+  .main {
+    padding-bottom: 5.62rem;
   }
 }
 
@@ -53,8 +63,13 @@ body {
   body {
     font-size: 16px;
   }
+
   [class*="__container"] {
     padding: 0 29px;
+  }
+
+  .main {
+    padding-bottom: 5rem;
   }
 }
 
