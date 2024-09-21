@@ -37,7 +37,7 @@
 
   &__address {
     a {
-      display: flex;
+      display: block;
 
       .tel-ico {
         display: none;
@@ -140,7 +140,7 @@
       display: block;
       width: 2.625rem;
       height: 2.625rem;
-      img{
+      img {
         object-fit: cover;
       }
     }
@@ -162,10 +162,107 @@
 
 @media screen and (max-width: 960px) {
   .header {
+    &__body {
+      gap: 1.25rem;
+    }
+
+    .custom-logo-link {
+      width: 11.0625rem;
+    }
+
+    &__lang {
+      display: none;
+    }
+
+    &__bottom {
+      display: none;
+    }
+
+    .btn-def {
+      .btn-part1 {
+        display: none;
+      }
+      .btn-part2 {
+        display: block;
+      }
+    }
+  }
+
+  .burger {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.95rem 0.81rem;
+    background-color: var(--cy);
+
+    &__body {
+      position: relative;
+      width: 1.6875rem;
+      height: 1.3125rem;
+
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 0.1875rem;
+        background-color: var(--cm);
+        transform: translateX(-50%) translateY(-50%) rotate(0);
+        transition: all 150ms ease-in;
+        &:first-child {
+          top: 0;
+          transform: translateX(-50%) translateY(0%);
+        }
+        &:last-child {
+          top: 100%;
+          transform: translateX(-50%) translateY(-100%);
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
   .header {
+    &__container {
+      gap: 1rem;
+    }
+
+    &__body {
+      gap: 0.63rem;
+    }
+
+    .custom-logo-link {
+      width: 10.8125rem;
+    }
+
+    &__connect {
+      display: none;
+    }
+
+    &__address {
+      a {
+        padding: 0.95rem 1rem;
+        background-color: var(--cm);
+        .tel-ico {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1.3125rem;
+          height: 1.3125rem;
+          img {
+            object-fit: cover;
+          }
+        }
+        .tel-text {
+          display: none;
+        }
+      }
+    }
+
+    .btn-def {
+      display: none;
+    }
   }
 }
