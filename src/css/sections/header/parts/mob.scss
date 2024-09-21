@@ -1,0 +1,21 @@
+.mob {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .mob {
+    display: block;
+
+    &__body {
+    }
+    &__nav {
+    }
+    &__container {
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mob {
+  }
+}

@@ -1,0 +1,32 @@
+.nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2.06rem;
+    a {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      line-height: normal;
+      transition: all 0.15s ease-in;
+      &:hover {
+        color: var(--cy);
+      }
+    }
+  }
+
+  .blog-link,
+  .policy-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .nav {
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav {
+  }
+}
