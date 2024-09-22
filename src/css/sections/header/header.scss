@@ -1,6 +1,7 @@
 .header {
   position: relative;
-  background-color: var(--cw);
+  box-shadow: 0 0.25rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease-in;
 
   &__container {
     display: flex;
@@ -10,8 +11,12 @@
     max-width: 90rem;
   }
   &__top {
+    position: relative;
+    z-index: 110;
     min-height: 5.9375rem;
     padding: 1.25rem 0 1.5rem 0;
+    background-color: var(--cw);
+    transition: all 0.15s ease-in;
   }
   &__body {
     display: flex;
@@ -38,6 +43,7 @@
   &__address {
     a {
       display: block;
+      transition: all 0.15s ease-in;
 
       .tel-ico {
         display: none;
@@ -45,6 +51,10 @@
       .tel-text {
         font-weight: 600;
         line-height: normal;
+      }
+
+      &:hover {
+        color: var(--cy);
       }
     }
   }
@@ -129,7 +139,7 @@
 
   &__bottom {
     border-top: 0.0625rem solid var(--ce);
-    padding: 1.63rem 0;
+    padding: 0.88rem 0;
   }
   &__soc {
     display: flex;
@@ -137,6 +147,8 @@
     gap: 1rem;
 
     a {
+      overflow: hidden;
+      border-radius: 50%;
       display: block;
       width: 2.625rem;
       height: 2.625rem;
@@ -162,6 +174,13 @@
 
 @media screen and (max-width: 960px) {
   .header {
+    &.is-opened {
+      box-shadow: none;
+      .header__top {
+        box-shadow: 0 0.25rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+
     &__body {
       gap: 1.25rem;
     }
@@ -200,6 +219,7 @@
       position: relative;
       width: 1.6875rem;
       height: 1.3125rem;
+      overflow: hidden;
 
       span {
         position: absolute;
@@ -217,6 +237,25 @@
         &:last-child {
           top: 100%;
           transform: translateX(-50%) translateY(-100%);
+        }
+      }
+    }
+
+    &.is-opened {
+      .burger__body {
+        span {
+          top: 50%;
+          background-color: var(--cm);
+          &:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-100%);
+          }
+          &:nth-child(1) {
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          }
+          &:nth-child(3) {
+            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          }
         }
       }
     }

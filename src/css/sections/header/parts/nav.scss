@@ -5,7 +5,7 @@
     gap: 1rem 2.06rem;
     a {
       display: block;
-      font-size: 0.9375rem;
+      font-size: 0.875rem;
       font-weight: 500;
       line-height: normal;
       transition: all 0.15s ease-in;
@@ -23,6 +23,27 @@
 
 @media screen and (max-width: 960px) {
   .nav {
+    &__list {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: 0;
+      a {
+        font-size: 0.9375rem;
+        padding: 1.09rem 0;
+        border-bottom: 0.03125rem solid rgba(0, 0, 0, 0.2);
+      }
+      li {
+        &:last-child {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .blog-link,
+    .policy-link {
+      display: block;
+    }
   }
 }
 
