@@ -1,0 +1,22 @@
+.def-soc {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    width: 2.625rem;
+    height: 2.625rem;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 500px) {
+}

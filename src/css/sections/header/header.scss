@@ -24,11 +24,6 @@
     gap: 2.1rem;
   }
 
-  .custom-logo-link {
-    display: block;
-    width: 15.9375rem;
-  }
-
   &__connect {
     display: flex;
     align-items: center;
@@ -141,21 +136,10 @@
     border-top: 0.0625rem solid var(--ce);
     padding: 0.88rem 0;
   }
-  &__soc {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 
-    a {
-      overflow: hidden;
-      border-radius: 50%;
-      display: block;
-      width: 2.625rem;
-      height: 2.625rem;
-      img {
-        object-fit: cover;
-      }
-    }
+  .custom-logo-link {
+    display: block;
+    width: 15.9375rem;
   }
 
   .btn-def {
@@ -185,16 +169,16 @@
       gap: 1.25rem;
     }
 
-    .custom-logo-link {
-      width: 11.0625rem;
-    }
-
     &__lang {
       display: none;
     }
 
     &__bottom {
       display: none;
+    }
+
+    .custom-logo-link {
+      width: 11.0625rem;
     }
 
     .btn-def {
@@ -272,10 +256,6 @@
       gap: 0.63rem;
     }
 
-    .custom-logo-link {
-      width: 10.8125rem;
-    }
-
     &__connect {
       display: none;
     }
@@ -298,6 +278,10 @@
           display: none;
         }
       }
+    }
+
+    .custom-logo-link {
+      width: 10.8125rem;
     }
 
     .btn-def {
