@@ -39,7 +39,7 @@
 
     &__box {
       display: flex;
-      align-items: start;
+      align-items: center;
       justify-content: space-between;
       gap: 1.25rem;
       background-color: var(--cq);
@@ -68,6 +68,8 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
+        font-size: 0.75rem;
+        line-height: normal;
         img {
           width: 1.0625rem;
           height: 0.78925rem;
@@ -80,10 +82,7 @@
 @media screen and (max-width: 500px) {
   .mob {
     &__box {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.25rem;
-      background-color: var(--cq);
+      gap: 1rem;
       padding: 1.03rem 1.25rem;
 
       p {
