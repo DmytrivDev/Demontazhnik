@@ -1,0 +1,125 @@
+.prices {
+  padding: 1.31rem 0 6rem 0;
+
+  &__container {
+  }
+
+  &__content {
+  }
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 23.69rem;
+    align-items: center;
+    background-color: var(--cy);
+    div {
+      padding: 1.12rem 1.56rem;
+      border-right: 0.0625rem solid var(--ce);
+      &:last-child {
+        border-right: none;
+      }
+      p {
+        color: var(--cw);
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.33;
+      }
+    }
+  }
+  &__main {
+    border: 0.0625rem solid var(--ce);
+    li {
+      display: grid;
+      grid-template-columns: 1fr 23.69rem;
+      align-items: center;
+      border-bottom: 0.0625rem solid var(--ce);
+      transition: all 0.15s ease-in;
+
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background: rgba(254, 209, 4, 0.05);
+        a {
+          text-decoration: underline;
+        }
+      }
+      div {
+        padding: 1.12rem 1.56rem;
+        border-right: 0.0625rem solid var(--ce);
+        a {
+          cursor: pointer;
+        }
+        a,
+        p {
+          line-height: 1.5;
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .tlh2 {
+    margin-bottom: 2.19rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .prices {
+    padding: 2.94rem 0 5.5rem 0;
+
+    &__header {
+      grid-template-columns: 1fr 14.69rem;
+    }
+    &__main {
+      li {
+        grid-template-columns: 1fr 14.69rem;
+        div {
+          a,
+          p {
+            line-height: 1.71;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    .tlh2 {
+      margin-bottom: 2.37rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .prices {
+    padding: 3.69rem 0 5rem 0;
+
+    &__header {
+      grid-template-columns: 1fr 8.19rem;
+      div {
+        padding: 0.6rem 0.62rem;
+        p {
+          font-size: 0.875rem;
+          line-height: 1.71;
+        }
+      }
+    }
+    &__main {
+      li {
+        grid-template-columns: 1fr 8.19rem;
+        div {
+          padding: 0.6rem 0.62rem;
+          a,
+          p {
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+
+    .tlh2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
