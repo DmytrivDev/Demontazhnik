@@ -1,0 +1,152 @@
+.services {
+  background-color: var(--cq);
+
+  &__container {
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  &__box {
+    position: relative;
+    z-index: 2;
+    ul {
+      max-width: 20rem;
+      margin-bottom: 1.81rem;
+
+      li {
+        color: var(--ct);
+        font-size: 0.875rem;
+        line-height: 1.7;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        &::before {
+          content: "";
+          flex-shrink: 0;
+          width: 0.125rem;
+          height: 0.125rem;
+          border-radius: 50%;
+          background-color: var(--ct);
+        }
+      }
+    }
+  }
+  &__card {
+    min-height: 35rem;
+    position: relative;
+    padding: 2.375rem 3rem 3.375rem 3rem;
+    background-color: var(--cw);
+  }
+
+  .item-card1 {
+    .services__img {
+      height: calc(100% + 2.52rem);
+      width: 100%;
+      div {
+        position: absolute;
+        bottom: -6.92rem;
+        right: -29.69rem;
+        width: 60.05969rem;
+      }
+    }
+  }
+  .item-card2 {
+    padding-bottom: 15rem;
+    .services__img {
+      height: 100%;
+      width: calc(100% + 5.06rem);
+      div {
+        position: absolute;
+        bottom: -7.69rem;
+        right: 0;
+        width: 63.8125rem;
+      }
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+  }
+
+  .tlh2 {
+    margin-bottom: 2.1875rem;
+  }
+  .tlh4 {
+    max-width: 24rem;
+    margin-bottom: 0.69rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .services {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.88rem;
+    }
+
+    &__box {
+      max-width: 23rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2.37rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .services {
+    &__box {
+      ul {
+        margin-bottom: 1.12rem;
+      }
+    }
+
+    &__cards {
+      gap: 1.56rem;
+    }
+    &__card {
+      min-height: 31.5625rem;
+      padding: 1rem 1.56em 1.81rem 1.56rem;
+    }
+
+    .item-card1 {
+      .services__img {
+        height: 100%;
+        div {
+          bottom: -4.79rem;
+          right: -30.21rem;
+          width: 46.45606rem;
+        }
+      }
+    }
+    .item-card2 {
+      padding-bottom: 12.3rem;
+      .services__img {
+        width: 100%;
+        div {
+          bottom: -5.81rem;
+          right: auto;
+          width: 52.3125rem;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .tlh2 {
+      margin-bottom: 1.88rem;
+    }
+    .tlh4 {
+      margin-bottom: 0.56rem;
+    }
+  }
+}

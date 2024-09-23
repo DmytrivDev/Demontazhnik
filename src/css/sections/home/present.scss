@@ -5,7 +5,6 @@
     position: relative;
   }
   &__body {
-    padding: 6rem 0;
     position: relative;
     z-index: 2;
   }
@@ -44,7 +43,7 @@
   }
 
   &__bottom {
-    padding-top: 5.38rem;
+    padding-top: 6rem;
   }
   &__progress {
     display: grid;
@@ -92,10 +91,6 @@
 
 @media screen and (max-width: 960px) {
   .present {
-    &__body {
-      padding: 5rem 0;
-    }
-
     &__content {
       width: 100%;
     }
@@ -114,7 +109,7 @@
     }
 
     &__bottom {
-      padding-top: 4.3rem;
+      padding-top: 5.5rem;
     }
 
     &__bg {
@@ -129,7 +124,7 @@
 
 @media screen and (max-width: 500px) {
   .present {
-    &__body {
+    .pd1 {
       padding: 20rem 0 4.5rem 0;
     }
 
