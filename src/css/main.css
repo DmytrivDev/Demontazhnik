@@ -7,6 +7,10 @@
 @import url('./settings/elements.scss');
 @import url('./settings/cluster.scss');
 
+/* General */
+@import url('./sections/general/achievement.scss');
+@import url('./sections/general/question.scss');
+
 /* Header */
 @import url('./sections/header/header.scss');
 @import url('./sections/header/parts/nav.scss');

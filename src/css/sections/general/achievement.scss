@@ -1,0 +1,55 @@
+.achievement {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.25rem, 1fr));
+  gap: 2rem;
+  li {
+    p {
+      color: var(--ct);
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+  }
+
+  .tlh3 {
+    display: flex;
+    gap: 0.69rem;
+    margin-bottom: 0.13rem;
+    &::before {
+      content: ">";
+      margin-top: 0.5rem;
+      color: var(--cy);
+      font-size: 1.125rem;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .achievement {
+    margin-top: 5.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .achievement {
+    margin-top: 4.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(10.0625rem, 1fr));
+    gap: 1.6rem 2rem;
+    li {
+      p {
+        font-size: 0.875rem;
+      }
+    }
+
+    .tlh3 {
+      margin-bottom: 0.06rem;
+      gap: 0.63rem;
+      &::before {
+        margin-top: 0.06rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
