@@ -1,3 +1,35 @@
+.breadcrumbs {
+  position: absolute;
+  z-index: 1;
+  top: 1.44rem;
+  left: 0;
+  width: 100%;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.94rem;
+    li {
+      display: flex;
+      align-items: center;
+      color: var(--ct);
+      font-size: 0.875rem;
+      line-height: 1.7;
+      span {
+        padding-right: 0.94rem;
+      }
+      &::after {
+        content: "-";
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 .def-soc {
   display: flex;
   align-items: center;
@@ -16,6 +48,11 @@
 }
 
 @media screen and (max-width: 960px) {
+  .breadcrumbs {
+    position: absolute;
+    z-index: 1;
+    top: 1.12rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
