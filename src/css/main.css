@@ -24,6 +24,7 @@
 @import url('./sections/home/equipment.scss');
 @import url('./sections/home/anywhere.scss');
 @import url('./sections/home/prices.scss');
+@import url('./sections/home/renewal.scss');
 
 /* Contact */
 @import url('./sections/contact/contact.scss');
