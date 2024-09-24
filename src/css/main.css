@@ -24,5 +24,8 @@
 @import url('./sections/home/anywhere.scss');
 @import url('./sections/home/prices.scss');
 
+/* Contact */
+@import url('./sections/contact/contact.scss');
+
 /* Footer */
 @import url('./sections/footer/footer.scss');
