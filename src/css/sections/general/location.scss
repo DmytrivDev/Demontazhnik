@@ -1,0 +1,157 @@
+.location {
+  padding-top: 6rem;
+
+  &__container {
+  }
+  &__body {
+  }
+
+  &__map {
+    width: 100%;
+    height: 23.25rem;
+    background-color: var(--ce);
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 1.81rem;
+    margin-top: -1.56rem;
+  }
+
+  &__contact {
+    width: fit-content;
+    color: var(--cw);
+    padding: 1.25rem 1.88rem;
+    background-color: var(--cm);
+    address {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.2rem 1.19rem;
+    }
+    .loc-divide {
+      opacity: 0.4;
+      font-size: 1.875rem;
+      font-weight: 100;
+    }
+  }
+  &__desc {
+  }
+  &__tel {
+    font-size: 1.5rem;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__connect {
+    display: flex;
+    align-items: center;
+    gap: 1.06rem;
+    a {
+      display: block;
+      width: 1.1875rem;
+      height: 1.1875rem;
+    }
+  }
+  &__mail {
+    font-weight: 500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__address {
+    width: fit-content;
+    padding: 1.25rem 1.88rem;
+    background-color: var(--cy);
+  }
+  &__street {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.69rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__graph {
+    p {
+      font-size: 0.875rem;
+    }
+  }
+
+  .tlh2 {
+    margin-bottom: 2.19rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .location {
+    padding-top: 5.5rem;
+
+    &__box {
+      flex-direction: column-reverse;
+      margin-top: -7.8125rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2.38rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .location {
+    padding-top: 5rem;
+
+    &__map {
+      height: 20.1875rem;
+    }
+
+    &__box {
+      margin-top: 1.25rem;
+    }
+
+    &__contact {
+      transform: translateX(-1.25rem);
+      width: calc(100% + 1.25rem);
+      padding: 0.88rem 1.25rem;
+      address {
+        gap: 0.2rem 1.12rem;
+      }
+      .loc-divide {
+        display: none;
+      }
+    }
+    &__desc {
+      font-size: 0.75rem;
+      margin-bottom: 0.44rem;
+    }
+    &__tel {
+      font-size: 1.125rem;
+    }
+    &__mail {
+      font-size: 0.875rem;
+    }
+
+    &__address {
+      width: calc(100% + 1.25rem);
+      padding: 0.88rem 1.25rem;
+    }
+    &__street {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+    &__graph {
+      p {
+        font-size: 0.75rem;
+      }
+    }
+
+    .tlh2 {
+      margin-bottom: 2rem;
+    }
+  }
+}

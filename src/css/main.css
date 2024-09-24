@@ -9,6 +9,7 @@
 
 /* General */
 @import url('./sections/general/achievement.scss');
+@import url('./sections/general/location.scss');
 @import url('./sections/general/question.scss');
 
 /* Header */
