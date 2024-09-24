@@ -21,6 +21,7 @@
 @import url('./sections/home/hero.scss');
 @import url('./sections/home/present.scss');
 @import url('./sections/home/services.scss');
+@import url('./sections/home/equipment.scss');
 @import url('./sections/home/anywhere.scss');
 @import url('./sections/home/prices.scss');
 
