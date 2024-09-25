@@ -19,8 +19,14 @@
       color: var(--ct);
       font-size: 0.875rem;
       line-height: 1.7;
-      span {
-        padding-right: 0.94rem;
+      span,
+      a {
+        margin-right: 0.94rem;
+      }
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
       }
       &::after {
         content: "-";
