@@ -32,6 +32,7 @@
 @import url('./sections/about/about.scss');
 @import url('./sections/about/military.scss');
 @import url('./sections/about/turnkey.scss');
+@import url('./sections/about/iso.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
