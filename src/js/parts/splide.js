@@ -1,47 +1,17 @@
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
 
-// const instSlider = () => {
-//   const slider = document.querySelector('.splide-hero');
-
-//   if (slider) {
-//     const options = {
-//       type: 'fade',
-//       arrows: false,
-//       autoplay: true,
-//       interval: 3000,
-//       rewind: true,
-//       speed: 2000,
-//       pagination: false,
-//       width: '33.125rem',
-//       height: '37.8125rem',
-//       breakpoints: {
-//         960: {
-//           width: '100%',
-//           height: '22.5rem',
-//         },
-//         500: {
-//           width: '100%',
-//           height: '12.5rem',
-//         },
-//       },
-//     };
-
-//     new Splide(slider, options).mount();
-//   }
-// };
-// instSlider();
-
 const instVideoSlider = () => {
   const slider = document.querySelector('.video__slider');
   if (slider) {
     const options = {
-      type: 'slider',
+      type: 'slide',
       speed: 1000,
       pagination: false,
       updateOnMove: true,
       gap: '1.5rem',
       perPage: 3,
+      perMove: 1,
       breakpoints: {
         960: {
           perPage: 2,
@@ -61,3 +31,47 @@ const instVideoSlider = () => {
   }
 };
 instVideoSlider();
+
+let militarySliderInstance;
+
+const instMilitarySlider = () => {
+  const slider = document.querySelector('.military__splide');
+
+  if (slider && !militarySliderInstance) {
+    const options = {
+      type: 'slide',
+      speed: 1000,
+      updateOnMove: true,
+      pagination: true,
+      arrows: false,
+      perPage: 4,
+      perMove: 1,
+      gap: ' 1.875rem',
+      breakpoints: {
+        500: {
+          perPage: 2,
+        },
+      },
+    };
+
+    militarySliderInstance = new Splide(slider, options).mount();
+  }
+};
+
+const destroySliders = () => {
+  if (militarySliderInstance) {
+    militarySliderInstance.destroy();
+    militarySliderInstance = null;
+  }
+};
+
+const checkViewport = () => {
+  instMilitarySlider();
+
+  if (window.innerWidth > 960) {
+    destroySliders();
+  }
+};
+
+checkViewport();
+window.addEventListener('resize', checkViewport);

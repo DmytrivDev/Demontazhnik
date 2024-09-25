@@ -90,6 +90,10 @@
 
 @media screen and (max-width: 960px) {
   .video {
+    &.pd1 {
+      padding-bottom: 9.25rem;
+    }
+
     &__text {
       margin-top: 0.875rem;
       p {
@@ -97,46 +101,13 @@
       }
     }
 
-    &.pd1 {
-      padding-bottom: 9.25rem;
-    }
-
     .tlh2 {
       margin-bottom: 2.38rem;
     }
 
     .splide {
-      &__track {
-        overflow: visible;
-      }
       &__slide {
         padding: 1.75rem;
-      }
-      &__pagination {
-        bottom: -3.13rem;
-        transform: translateY(100%);
-        gap: 0.62rem;
-        li {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          line-height: normal;
-        }
-      }
-      &__pagination__page {
-        margin: 0;
-        width: 0.5rem;
-        height: 0.5rem;
-        opacity: 1;
-        border-radius: 0;
-        background-color: var(--cy);
-        &.is-active {
-          border: 0.25rem solid var(--cy);
-          width: 0.75rem;
-          height: 0.75rem;
-          background: var(--cm);
-          transform: none;
-        }
       }
     }
   }
@@ -144,15 +115,15 @@
 
 @media screen and (max-width: 500px) {
   .video {
+    &.pd1 {
+      padding-bottom: 8.75rem;
+    }
+
     &__text {
       margin-top: 0.75rem;
       p {
         font-size: 0.875rem;
       }
-    }
-
-    &.pd1 {
-      padding-bottom: 8.75rem;
     }
 
     .tlh2 {

@@ -51,6 +51,35 @@
   }
 }
 
+.splide {
+  &__pagination {
+    bottom: -3.125rem !important;
+    transform: translateY(100%) !important;
+    gap: 0.625rem !important;
+    li {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      line-height: normal !important;
+    }
+  }
+  &__pagination__page {
+    margin: 0 !important;
+    width: 0.5rem !important;
+    height: 0.5rem !important;
+    opacity: 1 !important;
+    border-radius: 0 !important;
+    background-color: var(--cy) !important;
+    &.is-active {
+      border: 0.25rem solid var(--cy) !important;
+      width: 0.75rem !important;
+      height: 0.75rem !important;
+      background: var(--cm) !important;
+      transform: none !important;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .breadcrumbs {
     position: absolute;

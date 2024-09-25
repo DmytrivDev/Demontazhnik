@@ -1,0 +1,65 @@
+.military {
+  &__container {
+  }
+  &__splide {
+  }
+
+  .tlh2 {
+    margin-bottom: 2.5rem;
+  }
+
+  .splide {
+    &__track {
+    }
+    &__list {
+      display: grid !important;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2.125rem;
+    }
+    &__slide {
+      position: relative;
+      height: 20.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .military {
+    &.pd1 {
+      padding-bottom: 9.25rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2.38rem;
+    }
+
+    .splide {
+      &__list {
+        display: flex !important;
+        grid-template-columns: none;
+        gap: 0;
+      }
+      &__slide {
+        height: 14.375rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .military {
+    &.pd1 {
+      padding-bottom: 8.75rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2rem;
+    }
+
+    .splide {
+      &__slide {
+        height: 14.25rem;
+      }
+    }
+  }
+}
