@@ -28,8 +28,8 @@
 @import url('./sections/home/prices.scss');
 @import url('./sections/home/renewal.scss');
 
-/* Contact */
-@import url('./sections/contact/contact.scss');
+/* About */
+@import url('./sections/about/about.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');

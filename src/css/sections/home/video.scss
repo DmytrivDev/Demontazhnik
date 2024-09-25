@@ -19,8 +19,15 @@
     }
   }
   &__img {
-    position: relative;
-    padding-top: 56%;
+    overflow: hidden;
+    a {
+      display: block;
+      position: relative;
+      padding-top: 56%;
+    }
+    img {
+      transition: all 0.15s ease-in;
+    }
   }
 
   .tlh2 {
@@ -31,6 +38,19 @@
     &__slide {
       padding: 1.875rem;
       background-color: var(--cq);
+      &:hover {
+        .video__img {
+          img {
+            opacity: 0.8;
+          }
+        }
+        .btn-play {
+          background-color: var(--cm);
+          span {
+            background-color: var(--cy);
+          }
+        }
+      }
     }
 
     &__arrow {
