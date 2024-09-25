@@ -1,8 +1,6 @@
 .equipment {
-  &__body {
-    padding: 6rem 0;
-    position: relative;
-  }
+  position: relative;
+
   &__container {
     position: relative;
     z-index: 2;
@@ -39,7 +37,7 @@
       }
     }
   }
-  &__img {
+  &__bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -69,9 +67,6 @@
 
 @media screen and (max-width: 960px) {
   .equipment {
-    &__body {
-      padding: 5.5rem 0;
-    }
     &__info {
       flex-direction: column;
       align-items: start;
@@ -89,9 +84,6 @@
 
 @media screen and (max-width: 500px) {
   .equipment {
-    &__body {
-      padding: 5rem 0;
-    }
     &__info {
       gap: 2rem;
       margin-bottom: 2.5rem;

@@ -1,0 +1,153 @@
+.turnkey {
+  position: relative;
+
+  &__container {
+    position: relative;
+    z-index: 3;
+  }
+  &__body {
+    position: relative;
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__list {
+    max-width: 61rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    li {
+      display: flex;
+      align-items: start;
+      gap: 1.25rem;
+      p {
+        color: var(--cw);
+        font-size: 1.125rem;
+        line-height: 1.7;
+      }
+      span {
+        color: var(--cy);
+        font-weight: 600;
+      }
+      &::before {
+        content: "";
+        transform: translateY(-0.19rem);
+        flex-shrink: 0;
+        width: 1.6875rem;
+        height: 2rem;
+        background-size: 1.6875rem 2rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: var(--itemDemon);
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--cb);
+    }
+    img {
+      z-index: 2;
+      opacity: 0.15;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: calc(100% + 26.37rem);
+    height: calc(100% + 1.5rem);
+    div {
+      position: absolute;
+      right: 0;
+      bottom: -1.5rem;
+      width: 87.125rem;
+    }
+  }
+
+  .tlh2 {
+    max-width: 49rem;
+    margin-bottom: 2.69rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .turnkey {
+    &__list {
+      max-width: 34.75rem;
+    }
+
+    &__img {
+      transform: rotateY(180deg);
+      div {
+        bottom: -4.4rem;
+        right: 11rem;
+      }
+    }
+
+    .tlh2 {
+      max-width: 100%;
+      margin-bottom: 2.06rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .turnkey {
+    overflow: hidden;
+
+    .pd1 {
+      padding-bottom: 6.75rem;
+    }
+
+    &__list {
+      max-width: 100%;
+      li {
+        gap: 1.125rem;
+        p {
+          font-size: 0.875rem;
+        }
+        &::before {
+          width: 1.22675rem;
+          height: 1.45394rem;
+          background-size: 1.22675rem 1.45394rem;
+        }
+      }
+    }
+
+    &__img {
+      overflow: visible;
+      width: calc(100% + 26.37rem);
+      left: auto;
+      right: 0;
+      div {
+        bottom: -1.81rem;
+        width: 54rem;
+        right: 25rem;
+      }
+    }
+
+    .tlh2 {
+      margin-bottom: 1.56rem;
+    }
+  }
+}
