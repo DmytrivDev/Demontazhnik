@@ -86,6 +86,35 @@
   }
 }
 
+.pagination__cont {
+  margin-top: 3.75rem;
+  display: flex;
+  justify-content: end;
+  .facetwp-pager {
+    display: flex;
+    align-items: center;
+  }
+  .facetwp-page {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cb);
+    text-align: center;
+    font-weight: 500;
+    line-height: normal;
+    width: 2.75rem;
+    height: 2.75rem;
+    transition: all 0.15s ease-in;
+    &.active {
+      background-color: var(--cy);
+    }
+    &:hover {
+      background-color: var(--cy);
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .breadcrumbs {
     position: absolute;
@@ -93,7 +122,15 @@
     top: 1.12rem;
     left: 1.25em;
   }
+
+  .pagination__cont {
+    margin-top: 3.125rem;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  .pagination__cont {
+    margin-top: 2.8125rem;
+  }
 }

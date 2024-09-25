@@ -11,6 +11,7 @@
   &__content {
     position: relative;
     z-index: 2;
+    min-height: 45.625rem;
   }
 
   &__list {
@@ -77,17 +78,28 @@
       right: 0;
       bottom: -1.5rem;
       width: 87.125rem;
+      height: calc(100% + 1.5rem);
+      img {
+        height: 100%;
+      }
     }
   }
 
   .tlh2 {
     max-width: 49rem;
     margin-bottom: 2.69rem;
+    span {
+      font-weight: 700;
+    }
   }
 }
 
 @media screen and (max-width: 960px) {
   .turnkey {
+    &__content {
+      min-height: 50.625rem;
+    }
+
     &__list {
       max-width: 34.75rem;
     }
@@ -97,6 +109,10 @@
       div {
         bottom: -4.4rem;
         right: 11rem;
+        height: auto;
+        img {
+          height: auto;
+        }
       }
     }
 
@@ -113,6 +129,10 @@
 
     .pd1 {
       padding-bottom: 6.75rem;
+    }
+
+    &__content {
+      min-height: 45.625rem;
     }
 
     &__list {
