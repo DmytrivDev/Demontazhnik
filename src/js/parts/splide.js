@@ -44,6 +44,14 @@ const instVideoSlider = () => {
       perPage: 3,
       breakpoints: {
         960: {
+          perPage: 2,
+          speed: 700,
+          pagination: true,
+          arrows: false,
+          gap: '1.25rem',
+        },
+        500: {
+          perPage: 1,
           speed: 500,
         },
       },

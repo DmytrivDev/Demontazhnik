@@ -1,0 +1,148 @@
+.video {
+  &__container {
+  }
+  &__slider {
+  }
+  &__text {
+    margin-top: 0.75rem;
+    p {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    padding-top: 56%;
+  }
+
+  .tlh2 {
+    margin-bottom: 2.19rem;
+  }
+
+  .splide {
+    &__slide {
+      padding: 1.875rem;
+      background-color: var(--cq);
+    }
+
+    &__arrow {
+      opacity: 1;
+      background-color: transparent;
+    }
+    &__arrow--prev {
+      left: -2.5rem;
+      transform: translateX(-100%);
+    }
+    &__arrow--next {
+      right: -2.5rem;
+      transform: translateX(100%);
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .video {
+    .splide {
+      &__arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: var(--cy);
+      }
+      &__arrow--prev {
+        left: 0;
+        transform: translateX(-50%);
+      }
+      &__arrow--next {
+        right: 0;
+        transform: translateX(50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .video {
+    &__text {
+      margin-top: 0.875rem;
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &.pd1 {
+      padding-bottom: 9.25rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2.38rem;
+    }
+
+    .splide {
+      &__track {
+        overflow: visible;
+      }
+      &__slide {
+        padding: 1.75rem;
+      }
+      &__pagination {
+        bottom: -3.13rem;
+        transform: translateY(100%);
+        gap: 0.62rem;
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: normal;
+        }
+      }
+      &__pagination__page {
+        margin: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        opacity: 1;
+        border-radius: 0;
+        background-color: var(--cy);
+        &.is-active {
+          border: 0.25rem solid var(--cy);
+          width: 0.75rem;
+          height: 0.75rem;
+          background: var(--cm);
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .video {
+    &__text {
+      margin-top: 0.75rem;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+
+    &.pd1 {
+      padding-bottom: 8.75rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2rem;
+    }
+
+    .splide {
+      &__slide {
+        padding: 1.5rem;
+      }
+    }
+  }
+}
