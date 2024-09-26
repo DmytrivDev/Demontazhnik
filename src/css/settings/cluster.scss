@@ -1,13 +1,10 @@
 .breadcrumbs {
+  margin-top: 1.5rem;
+
   &__container {
     position: relative;
     max-width: 90rem;
   }
-  position: absolute;
-  z-index: 1;
-  top: 1.44rem;
-  left: 2.5rem;
-  width: 100%;
 
   ul {
     display: flex;
@@ -182,12 +179,15 @@
   }
 }
 
+.contact {
+  .location {
+    padding-top: 4.5rem;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .breadcrumbs {
-    position: absolute;
-    z-index: 1;
-    top: 1.12rem;
-    left: 1.25em;
+    margin-top: 1.125rem;
   }
 
   .pagination__cont {
@@ -205,6 +205,12 @@
       }
     }
   }
+
+  .contact {
+    .location {
+      padding-top: 4rem;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -217,6 +223,12 @@
       a {
         padding-top: 70%;
       }
+    }
+  }
+
+  .contact {
+    .location {
+      padding-top: 3rem;
     }
   }
 }
