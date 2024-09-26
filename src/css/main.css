@@ -40,5 +40,9 @@
 /* News */
 @import url('./sections/news/news.scss');
 
+/* Doc */
+@import url('./sections/doc/doc.scss');
+@import url('./sections/doc/aboutus.scss');
+
 /* Footer */
 @import url('./sections/footer/footer.scss');
