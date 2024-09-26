@@ -11,6 +11,7 @@
 @import url('./sections/general/achievement.scss');
 @import url('./sections/general/location.scss');
 @import url('./sections/general/question.scss');
+@import url('./sections/general/completed.scss');
 
 /* Header */
 @import url('./sections/header/header.scss');
@@ -21,7 +22,6 @@
 @import url('./sections/home/hero.scss');
 @import url('./sections/home/present.scss');
 @import url('./sections/home/services.scss');
-@import url('./sections/home/completed.scss');
 @import url('./sections/home/video.scss');
 @import url('./sections/home/equipment.scss');
 @import url('./sections/home/anywhere.scss');
