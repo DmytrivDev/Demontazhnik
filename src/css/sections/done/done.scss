@@ -1,0 +1,69 @@
+.done {
+  &__container {
+  }
+  &__body {
+    padding-top: 4.5rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  &__card {
+    display: flex;
+    padding: 2.5rem;
+    background-color: var(--cq);
+    transition: all 0.15s ease-in;
+    &:hover {
+      box-shadow: 0 0.25rem 2.5rem 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__info {
+  }
+
+  &__heading {
+  }
+
+  &__location {
+  }
+
+  &__date {
+  }
+
+  &__name {
+  }
+
+  &__desc {
+  }
+
+  &__img-wrapp {
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__deadline {
+  }
+
+  .tlh2 {
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .done {
+    &__body {
+      padding-top: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .done {
+    &__body {
+      padding-top: 3rem;
+    }
+  }
+}
