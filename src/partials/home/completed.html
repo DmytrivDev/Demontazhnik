@@ -11,13 +11,26 @@
       <a href="#" class="btn-def">Всі виконані проєкти</a>
     </div>
 
-    <div class="completed__wrapp">
-      <div class="completed__img">
-        <img src="./img/content/completed_1.jpg" alt="" class="cover" />
-      </div>
-      <div class="completed__img">
-        <img src="./img/content/completed_2.jpg" alt="" class="cover" />
-      </div>
+    <div class="completed__img-wrapp">
+      <img-comparison-slider>
+        <img slot="first" width="100%" src="./img/content/completed_1.jpg" />
+        <img slot="second" width="100%" src="./img/content/completed_2.jpg" />
+        <svg
+          slot="handle"
+          viewBox="0 0 32 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31.4654 12.0882L23.0845 0.310547V23.8659L31.4654 12.0882Z"
+            fill="white"
+          />
+          <path
+            d="M0.0370169 12.0882L8.41797 0.310547V23.8659L0.0370169 12.0882Z"
+            fill="white"
+          />
+        </svg>
+      </img-comparison-slider>
     </div>
   </div>
 </section>
