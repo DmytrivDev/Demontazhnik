@@ -235,6 +235,11 @@
     padding-top: 4.5rem;
   }
 }
+.policy {
+  .tlh2 {
+    margin-bottom: 1.44rem;
+  }
+}
 
 @media screen and (max-width: 960px) {
   .breadcrumbs {
@@ -266,6 +271,11 @@
   .contact {
     .location {
       padding-top: 4rem;
+    }
+  }
+  .policy {
+    .tlh2 {
+      margin-bottom: 1.31rem;
     }
   }
 }
@@ -300,6 +310,11 @@
   .contact {
     .location {
       padding-top: 3rem;
+    }
+  }
+  .policy {
+    .tlh2 {
+      margin-bottom: 1.19rem;
     }
   }
 }

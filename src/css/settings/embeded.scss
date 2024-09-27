@@ -1,10 +1,10 @@
 .embeded {
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.6em;
   color: var(--cm);
 
   & > * {
-    margin-top: 1.5em;
+    margin-top: 0.75em;
 
     &:first-child {
       margin-top: 0;
@@ -28,7 +28,7 @@
     font-size: 1.125em;
     font-weight: 500;
     line-height: 1.556em;
-    margin-top: 1.5rem;
+    margin-top: 1em;
   }
 
   h1,
@@ -37,52 +37,24 @@
   h4,
   h5,
   h6 {
-    font-weight: 500;
+    font-weight: 600;
   }
 
-  h1 {
-    font-size: 2.188em;
-    line-height: 1.2em;
-    margin-top: 1.429em;
-    margin-bottom: 0.743rem;
-  }
-  h2 {
-    font-size: 2em;
-    line-height: 1.25em;
-    margin-top: 1.5em;
-    margin-bottom: 0.75em;
-  }
+  h2,
   h3 {
-    font-size: 1.813em;
-    line-height: 1.31em;
-    margin-top: 1.586em;
-    margin-bottom: 0.759em;
-  }
-  h4 {
-    font-size: 1.625em;
-    line-height: 1.385em;
-    margin-top: 1.692em;
-    margin-bottom: 0.769em;
-  }
-  h5 {
-    font-size: 1.5em;
-    line-height: 1.417em;
-    margin-top: 1.75em;
+    font-size: 1.25em;
+    line-height: 1.7em;
+    margin-top: 1em;
     margin-bottom: 0.75em;
   }
-  h6 {
-    font-size: 1.375em;
-    line-height: 1.455em;
-    margin-top: 1.818em;
-    margin-bottom: 0.727em;
-  }
 
-  b {
-    margin-top: 1.5rem;
-    display: block;
-    font-size: 1.125em;
-    font-weight: 500;
-    line-height: 1.556em;
+  h4,
+  h5,
+  h6 {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
   }
 
   ul {
@@ -169,30 +141,22 @@
 @media screen and (max-width: 960px) {
   .embeded {
     font-size: 0.875em;
-    line-height: 1.429em;
+    line-height: 1.4em;
 
     b {
       font-size: 1em;
-      line-height: 1.5em;
+      line-height: 1.45em;
     }
 
-    h1 {
-      font-size: 1.188em;
-      line-height: 1.526em;
-    }
-    h2 {
-      font-size: 1.125em;
-      line-height: 1.556em;
-    }
+    h2,
     h3 {
-      font-size: 1.063em;
-      line-height: 1.588em;
+      font-size: 1em;
     }
+
     h4,
     h5,
     h6 {
-      font-size: 1em;
-      line-height: 1.625em;
+      font-size: 0.875em;
     }
   }
 }
