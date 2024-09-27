@@ -26,11 +26,15 @@
     height: 22.125rem;
   }
   img-comparison-slider {
+    cursor: grab;
     height: 100%;
     width: 100%;
     --divider-width: 0.25rem !important;
     &:focus {
       outline: none;
+    }
+    &:active {
+      cursor: grabbing;
     }
 
     img {

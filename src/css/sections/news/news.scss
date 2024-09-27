@@ -2,7 +2,6 @@
   &__container {
   }
   &__body {
-    padding-top: 4.5rem;
     display: grid;
     grid-template-columns: 1fr 25.8125rem;
     align-items: start;
@@ -146,7 +145,6 @@
 @media screen and (max-width: 960px) {
   .news {
     &__body {
-      padding-top: 4rem;
       grid-template-columns: 1fr;
       gap: 0;
     }
@@ -163,10 +161,6 @@
 
 @media screen and (max-width: 500px) {
   .news {
-    &__body {
-      padding-top: 3rem;
-    }
-
     &__date {
       transform: translateY(-20%);
       p {

@@ -8,6 +8,10 @@
   padding: 6rem 0;
 }
 
+.sec-first {
+  padding-top: 4.5rem;
+}
+
 .tlh1 {
   font-size: 3.125rem;
   font-weight: 700;
@@ -95,7 +99,11 @@
 
 @media screen and (max-width: 960px) {
   .pd1 {
-    padding: 5.5rem 0;
+    padding: 4rem 0;
+  }
+
+  .sec-first {
+    padding-top: 4rem;
   }
 
   .tlh1 {
@@ -117,7 +125,11 @@
 
 @media screen and (max-width: 500px) {
   .pd1 {
-    padding: 4.5rem 0;
+    padding: 3rem 0;
+  }
+
+  .sec-first {
+    padding-top: 3rem;
   }
 
   .tlh1 {

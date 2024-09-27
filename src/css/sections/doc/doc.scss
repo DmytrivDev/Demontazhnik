@@ -2,7 +2,6 @@
   &__container {
   }
   &__body {
-    padding-top: 4.5rem;
   }
 
   &__documents {
@@ -38,10 +37,6 @@
 
 @media screen and (max-width: 960px) {
   .doc {
-    &__body {
-      padding-top: 4rem;
-    }
-
     &__documents {
       li {
         flex-basis: calc((100% - 2 * 2.125rem) / 3);
@@ -56,10 +51,6 @@
 
 @media screen and (max-width: 500px) {
   .doc {
-    &__body {
-      padding-top: 3rem;
-    }
-
     &__documents {
       gap: 1.25rem;
       li {

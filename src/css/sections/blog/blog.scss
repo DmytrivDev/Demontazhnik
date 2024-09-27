@@ -2,7 +2,6 @@
   &__container {
   }
   &__body {
-    padding-top: 4.5rem;
   }
 
   &__cards {
@@ -32,10 +31,6 @@
 
 @media screen and (max-width: 960px) {
   .blog {
-    &__body {
-      padding-top: 4rem;
-    }
-
     &__cards {
       gap: 1.625rem;
     }
@@ -66,10 +61,6 @@
 
 @media screen and (max-width: 500px) {
   .blog {
-    &__body {
-      padding-top: 3rem;
-    }
-
     &__cards {
       gap: 1.25rem;
     }

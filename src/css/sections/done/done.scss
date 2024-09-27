@@ -2,7 +2,6 @@
   &__container {
   }
   &__body {
-    padding-top: 4.5rem;
   }
 
   &__cards {
@@ -91,11 +90,15 @@
     margin-bottom: 2.125rem;
   }
   img-comparison-slider {
+    cursor: grab;
     height: 100%;
     width: 100%;
     --divider-width: 0.2625rem !important;
     &:focus {
       outline: none;
+    }
+    &:active {
+      cursor: grabbing;
     }
 
     img {
@@ -138,10 +141,6 @@
 
 @media screen and (max-width: 960px) {
   .done {
-    &__body {
-      padding-top: 4rem;
-    }
-
     &__cards {
       gap: 1.875rem;
     }
@@ -180,10 +179,6 @@
 
 @media screen and (max-width: 500px) {
   .done {
-    &__body {
-      padding-top: 3rem;
-    }
-
     &__cards {
       gap: 1.875rem;
     }
