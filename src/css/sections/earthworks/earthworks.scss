@@ -1,0 +1,42 @@
+.earthworks {
+  &__container {
+  }
+  &__body {
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.0625rem 2.375rem;
+  }
+
+  .tlh2 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .earthworks {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.0625rem 1.4375rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2.375rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .earthworks {
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 2rem ;
+    }
+
+    .tlh2 {
+      margin-bottom: 2rem;
+    }
+  }
+}

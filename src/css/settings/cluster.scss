@@ -192,15 +192,15 @@
   }
 
   &__info {
+    position: relative;
     margin-top: 0.75rem;
-    display: flex;
-    align-items: start;
-    gap: 1rem;
   }
 
   &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
     transform: translateY(-60%);
-    flex-shrink: 0;
     width: 3.25rem;
     height: 3.25rem;
     background-color: var(--cy);
@@ -223,6 +223,7 @@
   }
 
   &__name {
+    padding-right: 4.25rem;
     width: 100%;
     font-size: 1rem;
     font-weight: 600;
