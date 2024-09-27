@@ -185,6 +185,50 @@
   }
 }
 
+.workcard {
+  &__img {
+    position: relative;
+    padding-top: 100%;
+  }
+
+  &__info {
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  &__btn {
+    transform: translateY(-60%);
+    flex-shrink: 0;
+    width: 3.25rem;
+    height: 3.25rem;
+    background-color: var(--cy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease-in;
+    span {
+      width: 0.75rem;
+      height: 0.75rem;
+      transition: all 0.15s ease-in;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 1.875rem 0 rgba(254, 209, 4, 0.6);
+      span {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__name {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
 .contact {
   .location {
     padding-top: 4.5rem;
@@ -212,6 +256,12 @@
     }
   }
 
+  .workcard {
+    &__info {
+      margin-top: 0.625rem;
+    }
+  }
+
   .contact {
     .location {
       padding-top: 4rem;
@@ -229,6 +279,20 @@
       a {
         padding-top: 70%;
       }
+    }
+  }
+
+  .workcard {
+    &__img {
+      padding-top: 75%;
+    }
+
+    &__info {
+      margin-top: 0.5625rem;
+    }
+
+    &__name {
+      font-size: 0.875rem;
     }
   }
 

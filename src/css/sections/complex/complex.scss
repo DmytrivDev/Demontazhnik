@@ -1,9 +1,77 @@
+.complex {
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  &__item {
+    padding: 1.875rem 2.5rem 2rem 2.5rem;
+    background-color: var(--cq);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  .tlh2 {
+    margin-bottom: 2.5rem;
+  }
+  .tlh4 {
+    margin-bottom: 1.5625rem;
+    font-weight: 600;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .complex {
+    &__list {
+      gap: 1.5625rem;
+    }
+    &__item {
+      padding: 1.5625rem;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.375rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2.37rem;
+    }
+    .tlh4 {
+      margin-bottom: 1.3125rem;
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
   .complex {
+    &__list {
+      gap: 1.875rem;
+    }
+    &__item {
+      padding: 1.375rem 1.25rem 2rem 1.25rem;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
+    }
+
+    .tlh2 {
+      margin-bottom: 2rem;
+    }
+    .tlh4 {
+      margin-bottom: 1.375rem;
+    }
   }
 }
