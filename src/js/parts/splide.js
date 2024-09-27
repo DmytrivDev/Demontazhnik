@@ -33,7 +33,6 @@ const instVideoSlider = () => {
 instVideoSlider();
 
 let militarySliderInstance;
-let projectSliderInstance;
 
 const instMilitarySlider = () => {
   const slider = document.querySelector('.military__splide');
@@ -58,6 +57,8 @@ const instMilitarySlider = () => {
     militarySliderInstance = new Splide(slider, options).mount();
   }
 };
+
+let projectSliderInstance;
 
 const instProjectSlider = () => {
   const slider = document.querySelector('.project__splide');
@@ -94,6 +95,12 @@ const checkViewport = () => {
   instMilitarySlider();
   instProjectSlider();
 
+  projectSliderInstance.on('move', () => {
+    document.querySelectorAll('.project__video video').forEach(video => {
+      video.pause();
+    });
+  });
+
   if (window.innerWidth > 960) {
     destroySliders();
   }
@@ -101,3 +108,38 @@ const checkViewport = () => {
 
 checkViewport();
 window.addEventListener('resize', checkViewport);
+
+let activeVideo = null;
+
+const playVideo = async videoElement => {
+  console.log(activeVideo);
+  if (activeVideo && activeVideo !== videoElement) {
+    activeVideo.pause(); // Ставим на паузу предыдущее видео
+    console.log('object');
+  }
+
+  try {
+    await videoElement.play(); // Ждем, пока видео начнет воспроизводиться
+    videoElement.controls = true; // Добавляем атрибут controls для текущего видео
+    activeVideo = videoElement; // Обновляем активное видео
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Обработчик для каждого видео, чтобы запустить видео при клике
+document.querySelectorAll('.project__video video').forEach(video => {
+  video.addEventListener('click', function () {
+    // Если видео не активно, запускаем его
+    if (this !== activeVideo) {
+      // Убираем кнопку, если она есть
+      const button = this.closest('.project__video').querySelector('.btn-play');
+      if (button) {
+        button.style.display = 'none';
+      }
+
+      // Запускаем текущее видео
+      playVideo(this);
+    }
+  });
+});
