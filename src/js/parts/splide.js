@@ -95,7 +95,7 @@ const checkViewport = () => {
   instMilitarySlider();
   instProjectSlider();
 
-  projectSliderInstance.on('move', () => {
+  projectSliderInstance?.on('move', () => {
     document.querySelectorAll('.project__video video').forEach(video => {
       video.pause();
     });
