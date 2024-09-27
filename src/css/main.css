@@ -47,6 +47,9 @@
 /* Done */
 @import url('./sections/done/done.scss');
 
+/* Project */
+@import url('./sections/project/project.scss');
+
 /* Error */
 @import url('./sections/error/error.scss');
 

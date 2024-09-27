@@ -33,6 +33,7 @@ const instVideoSlider = () => {
 instVideoSlider();
 
 let militarySliderInstance;
+let projectSliderInstance;
 
 const instMilitarySlider = () => {
   const slider = document.querySelector('.military__splide');
@@ -58,15 +59,40 @@ const instMilitarySlider = () => {
   }
 };
 
+const instProjectSlider = () => {
+  const slider = document.querySelector('.project__splide');
+
+  if (slider && !projectSliderInstance) {
+    const options = {
+      type: 'slide',
+      speed: 1000,
+      updateOnMove: true,
+      pagination: true,
+      arrows: false,
+      perPage: 1,
+      perMove: 1,
+      gap: '1rem',
+    };
+
+    projectSliderInstance = new Splide(slider, options).mount();
+  }
+};
+
 const destroySliders = () => {
   if (militarySliderInstance) {
     militarySliderInstance.destroy();
     militarySliderInstance = null;
   }
+
+  if (projectSliderInstance) {
+    projectSliderInstance.destroy();
+    projectSliderInstance = null;
+  }
 };
 
 const checkViewport = () => {
   instMilitarySlider();
+  instProjectSlider();
 
   if (window.innerWidth > 960) {
     destroySliders();

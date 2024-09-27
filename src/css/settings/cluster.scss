@@ -16,6 +16,12 @@
       color: var(--ct);
       font-size: 0.875rem;
       line-height: 1.7;
+      &:last-child {
+        span,
+        a {
+          margin-right: 0;
+        }
+      }
       span,
       a {
         margin-right: 0.94rem;
