@@ -59,6 +59,15 @@
 /* Earthworks */
 @import url('./sections/earthworks/earthworks.scss');
 
+/* Application */
+@import url('./sections/application/application.scss');
+
+/* Consult */
+@import url('./sections/consult/consult.scss');
+
+/* Order */
+@import url('./sections/order/order.scss');
+
 /* Error */
 @import url('./sections/error/error.scss');
 
