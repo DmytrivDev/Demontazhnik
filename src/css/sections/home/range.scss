@@ -1,4 +1,4 @@
-.services {
+.range {
   background-color: var(--cq);
 
   &__container {
@@ -43,7 +43,7 @@
   }
 
   .item-card1 {
-    .services__img {
+    .range__img {
       height: calc(100% + 2.52rem);
       width: 100%;
       div {
@@ -56,7 +56,7 @@
   }
   .item-card2 {
     padding-bottom: 15rem;
-    .services__img {
+    .range__img {
       height: 100%;
       width: calc(100% + 5.06rem);
       div {
@@ -86,7 +86,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .services {
+  .range {
     &__cards {
       grid-template-columns: repeat(1, 1fr);
       gap: 1.88rem;
@@ -103,7 +103,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .services {
+  .range {
     &__box {
       ul {
         margin-bottom: 1.12rem;
@@ -119,7 +119,7 @@
     }
 
     .item-card1 {
-      .services__img {
+      .range__img {
         height: 100%;
         div {
           bottom: -4.79rem;
@@ -130,7 +130,7 @@
     }
     .item-card2 {
       padding-bottom: 12.3rem;
-      .services__img {
+      .range__img {
         width: 100%;
         div {
           bottom: -5.81rem;
