@@ -73,6 +73,8 @@ const instProjectSlider = () => {
       perPage: 1,
       perMove: 1,
       gap: '1rem',
+      drag: false,
+      swipe: false,
     };
 
     projectSliderInstance = new Splide(slider, options).mount();
@@ -112,10 +114,8 @@ window.addEventListener('resize', checkViewport);
 let activeVideo = null;
 
 const playVideo = async videoElement => {
-  console.log(activeVideo);
   if (activeVideo && activeVideo !== videoElement) {
     activeVideo.pause(); // Ставим на паузу предыдущее видео
-    console.log('object');
   }
 
   try {
@@ -128,18 +128,19 @@ const playVideo = async videoElement => {
 };
 
 // Обработчик для каждого видео, чтобы запустить видео при клике
-document.querySelectorAll('.project__video video').forEach(video => {
-  video.addEventListener('click', function () {
+document.querySelectorAll('.project__video').forEach(videoItem => {
+  videoItem.addEventListener('click', function () {
+    const video = videoItem.querySelector('video');
     // Если видео не активно, запускаем его
-    if (this !== activeVideo) {
+    if (video !== activeVideo) {
       // Убираем кнопку, если она есть
-      const button = this.closest('.project__video').querySelector('.btn-play');
+      const button = videoItem.querySelector('.btn-play');
       if (button) {
         button.style.display = 'none';
       }
 
       // Запускаем текущее видео
-      playVideo(this);
+      playVideo(video);
     }
   });
 });
