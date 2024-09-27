@@ -1,0 +1,138 @@
+.carpark {
+  &__container {
+  }
+
+  &__body {
+  }
+  &__wrapp {
+    display: grid;
+    grid-template-columns: 26rem 1fr;
+    align-items: start;
+    gap: 3.75rem;
+  }
+
+  &__main {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    & > * {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h2,
+    h3 {
+      font-style: 1.5rem;
+      font-weight: 600;
+      line-height: 1.6;
+      margin-top: 1.875rem;
+      margin-bottom: 0.75rem;
+    }
+    h4,
+    h5 {
+      font-size: 1.3125rem;
+      font-weight: 600;
+      line-height: 1.6;
+      margin-top: 1.875rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-top: 0.75rem;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    ol {
+      padding-left: 1.5rem;
+      li {
+        list-style: decimal;
+      }
+    }
+    ul {
+      padding-left: 1.5rem;
+      li {
+        list-style: disc;
+      }
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem;
+    li {
+      position: relative;
+      height: 16.3125rem;
+    }
+  }
+
+  .tlh2 {
+    margin-bottom: 2.12rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .carpark {
+    &__wrapp {
+      gap: 1.0625rem;
+      grid-template-columns: 25.9375rem 1fr;
+    }
+
+    &__gallery {
+      grid-template-columns: 1fr;
+      gap: 1.125rem;
+      li {
+        height: auto;
+        padding-top: 70%;
+      }
+    }
+
+    .tlh2 {
+      margin-bottom: 1.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carpark {
+    &__wrapp {
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      gap: 2.625rem;
+    }
+
+    &__main {
+      font-size: 0.875rem;
+
+      h2,
+      h3 {
+        font-style: 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.625rem;
+      }
+      h4,
+      h5 {
+        font-size: 1rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.625rem;
+      }
+    }
+
+    &__gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8125rem 0.6875rem;
+      li {
+        padding-top: 60%;
+      }
+    }
+
+    .tlh2 {
+      margin-bottom: 1.375rem;
+    }
+  }
+}
