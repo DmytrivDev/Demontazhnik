@@ -2,7 +2,7 @@ import scrollLock from 'scroll-lock';
 
 const btnsOpenModal = document.querySelectorAll('.open-modal');
 
-btnsOpenModal.forEach(btn => {
+btnsOpenModal?.forEach(btn => {
   btn.addEventListener('click', () => {
     const modalId = btn.dataset.id;
     const modal = document.getElementById(modalId);
