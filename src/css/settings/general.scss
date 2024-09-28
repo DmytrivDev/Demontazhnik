@@ -11,6 +11,13 @@ body {
   overflow: hidden;
 }
 
+.openedModal {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;

@@ -1,8 +1,21 @@
+import scrollLock from 'scroll-lock';
+
 const header = document.querySelector('.header');
 const burger = document.querySelector('.burger');
 const mobMenu = document.querySelector('.mob');
 const navLinks = document.querySelectorAll('.mob .nav__list a');
-const body = document.querySelector('body');
+
+let isScrollLocked = false;
+
+function toggleScrollLock() {
+  if (isScrollLocked) {
+    scrollLock.enablePageScroll();
+    isScrollLocked = false;
+  } else {
+    scrollLock.disablePageScroll();
+    isScrollLocked = true;
+  }
+}
 
 function updateMobMenuBodyMargin() {
   const headerTop = document.querySelector('.header__top');
@@ -18,19 +31,21 @@ function toggleMenu() {
   burger.classList.toggle('is-opened');
   mobMenu.classList.toggle('is-opened');
   header.classList.toggle('is-opened');
-  body.classList.toggle('overhide');
+
+  toggleScrollLock();
 }
 
 function closeMenu() {
   burger.classList.remove('is-opened');
   mobMenu.classList.remove('is-opened');
   header.classList.remove('is-opened');
-  body.classList.remove('overhide');
+
+  scrollLock.enablePageScroll();
 }
 
 function disableOverhide() {
   if (window.innerWidth > 960) {
-    body.classList.remove('overhide');
+    scrollLock.enablePageScroll();
   }
 }
 

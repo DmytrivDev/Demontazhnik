@@ -8,6 +8,7 @@
 @import url('./settings/cluster.scss');
 
 /* General */
+@import url('./sections/general/modal.scss');
 @import url('./sections/general/achievement.scss');
 @import url('./sections/general/location.scss');
 @import url('./sections/general/question.scss');
@@ -71,12 +72,6 @@
 
 /* Application */
 @import url('./sections/application/application.scss');
-
-/* Consult */
-@import url('./sections/consult/consult.scss');
-
-/* Order */
-@import url('./sections/order/order.scss');
 
 /* Error */
 @import url('./sections/error/error.scss');
