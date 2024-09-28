@@ -1,4 +1,6 @@
 .methods {
+  padding-top: 6rem;
+
   &__container {
   }
 
@@ -59,6 +61,8 @@
 
 @media screen and (max-width: 960px) {
   .methods {
+    padding-top: 5.5rem;
+
     &__info {
       margin-bottom: 2.75rem;
     }
@@ -89,6 +93,8 @@
 
 @media screen and (max-width: 500px) {
   .methods {
+    padding-top: 4.5rem;
+
     &__info {
       margin-bottom: 2.125rem;
     }

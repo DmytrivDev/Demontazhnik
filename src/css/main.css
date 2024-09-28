@@ -67,6 +67,7 @@
 @import url('./sections/services/advantages.scss');
 @import url('./sections/services/coating.scss');
 @import url('./sections/services/methods.scss');
+@import url('./sections/services/answers.scss');
 
 /* Application */
 @import url('./sections/application/application.scss');
