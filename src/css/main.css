@@ -61,6 +61,8 @@
 
 /* Services */
 @import url('./sections/services/services.scss');
+@import url('./sections/services/offers.scss');
+@import url('./sections/services/advantages.scss');
 @import url('./sections/services/coating.scss');
 
 /* Application */
