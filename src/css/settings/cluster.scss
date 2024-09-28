@@ -231,6 +231,38 @@
 }
 
 .infservice {
+  display: flex;
+  align-items: center;
+  gap: 3.875rem;
+
+  &__content {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__text {
+    margin-bottom: 2.38rem;
+    p {
+      margin-bottom: 1rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    flex-shrink: 0;
+    width: 31.0625rem;
+    height: 25rem;
+    img {
+      z-index: 2;
+    }
+  }
+
+  .tlh2 {
+    margin-bottom: 1.44rem;
+  }
 }
 
 .contact {
@@ -271,6 +303,29 @@
     }
   }
 
+  .infservice {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 3.12rem;
+
+    &__text {
+      margin-bottom: 2.62rem;
+      p {
+        line-height: 1.7;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      padding-top: 55%;
+    }
+
+    .tlh2 {
+      margin-bottom: 1.31rem;
+    }
+  }
+
   .contact {
     .location {
       padding-top: 4rem;
@@ -307,6 +362,26 @@
 
     &__name {
       font-size: 0.875rem;
+    }
+  }
+
+  .infservice {
+    gap: 2.5rem;
+
+    &__text {
+      margin-bottom: 2.06rem;
+      p {
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    &__img {
+      padding-top: 60%;
+    }
+
+    .tlh2 {
+      margin-bottom: 1.19rem;
     }
   }
 

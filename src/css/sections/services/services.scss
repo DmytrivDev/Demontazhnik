@@ -1,9 +1,39 @@
+.services {
+  &__container {
+  }
+  &__body {
+  }
+
+  &__wrapp {
+    position: relative;
+    flex-shrink: 0;
+  }
+  &__vec {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: -2.56rem;
+    transform: translateY(-50%);
+    width: 17.25rem;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .services {
+    &__vec {
+      top: -7.81rem;
+      right: -1.25rem;
+      transform: translateY(0);
+      width: 14.375rem;
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
   .services {
+    &__vec {
+      top: -6.63rem;
+      width: 6.6875rem;
+    }
   }
 }

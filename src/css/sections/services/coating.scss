@@ -1,6 +1,34 @@
+.coating {
+  background-color: var(--cq);
+}
+
 @media screen and (max-width: 960px) {
-  .coating {
-  }
+  // .coating {
+  //   .infservice {
+  //     flex-direction: row;
+  //     gap: 3.06rem;
+  //     position: relative;
+  //   }
+  //   .infservice__text {
+  //     width: 21.4375rem;
+  //     p {
+  //       font-size: 0.875rem;
+  //       line-height: 1.6;
+  //     }
+  //   }
+  //   .infservice__img {
+  //     position: absolute;
+  //     right: 0;
+  //     bottom: 0;
+  //     width: calc(100% - 24.4975rem);
+  //     padding-top: 0;
+  //     height: calc(90%);
+  //   }
+
+  //   .tlh2 {
+  //     text-wrap: wrap;
+  //   }
+  // }
 }
 
 @media screen and (max-width: 500px) {
