@@ -1,6 +1,4 @@
 .offers {
-  padding-top: 6rem;
-
   &__container {
   }
 
@@ -72,8 +70,6 @@
 
 @media screen and (max-width: 960px) {
   .offers {
-    padding-top: 5.5rem;
-
     &__content {
       &::before {
         height: calc(100% + 1.25rem);
@@ -92,8 +88,6 @@
 
 @media screen and (max-width: 500px) {
   .offers {
-    padding-top: 4.5rem;
-
     &__list {
       padding: 1.375rem 1.875rem;
       grid-template-columns: 1fr;
