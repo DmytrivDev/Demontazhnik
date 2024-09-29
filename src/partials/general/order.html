@@ -1,9 +1,76 @@
-<div class="modal" id="orderModal">
+<div class="modal is-transition" id="orderModal">
   <div class="modal__container">
     <div class="modal__body">
-      <div class="modal__wrapp">
-        <button class="modal__back" type="button">X</button>
+      <button class="modal__back" type="button">
+        <span>Повернутись назад</span>
+      </button>
+      <div class="modal__main">
+        <h3 class="tlh3">Залишай заявку на безкоштовнку консультацію</h3>
+        <div class="modal__text">
+          <p>
+            Запишіться на безкоштовну консультацію, щоб отримати експертні
+            поради та дізнатися, як наші рішення допоможуть вам в процесі
+            демонтажа
+          </p>
+        </div>
+        <form class="modal__form">
+          <div class="modal__box">
+            <!-- <label class="modal__checkbox is-error"> -->
+            <label class="modal__label">
+              <p>Ім’я</p>
+              <input
+                type="text"
+                name="orderName"
+                placeholder="Пишіть тут"
+                data-required="true"
+              />
+              <span></span>
+            </label>
+            <label class="modal__label">
+              <p>Телефон</p>
+              <input
+                type="text"
+                name="orderTel"
+                placeholder="Телефон"
+                data-required="true"
+              />
+              <span></span>
+            </label>
+            <label class="modal__label">
+              <p>Електронна пошта</p>
+              <input
+                type="email"
+                name="orderEmail"
+                placeholder="Пошта"
+                data-required="true"
+              />
+              <span></span>
+            </label>
+            <label class="modal__label">
+              <p>Коментар</p>
+              <textarea name="orderMess" placeholder="Коментар"></textarea>
+              <span></span>
+            </label>
+          </div>
+
+          <div class="modal__bottom">
+            <label class="modal__checkbox">
+              <input type="checkbox" name="agree" data-required="true" />
+              <span></span>
+              <p>
+                Погоджуюся з
+                <a href="./policy.html">політикою конфіденційності</a>
+              </p>
+            </label>
+
+            <button type="submit" class="btn-def">Надіслати</button>
+          </div>
+        </form>
       </div>
+    </div>
+
+    <div class="modal__bg no-select">
+      <img src="./img/decor/present_bg.png" alt="" />
     </div>
   </div>
 </div>

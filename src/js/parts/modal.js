@@ -5,27 +5,33 @@ const btnsOpenModal = document.querySelectorAll('.open-modal');
 btnsOpenModal?.forEach(btn => {
   btn.addEventListener('click', () => {
     const modalId = btn.dataset.id;
-    const modal = document.getElementById(modalId);
-    const btnBack = modal.querySelector('.modal__back');
+    if (modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        const btnBack = modal.querySelector('.modal__back');
 
-    function openModal() {
-      modal.classList.add('is-visible');
-      scrollLock.disablePageScroll();
-    }
+        function openModal() {
+          modal.classList.add('is-visible');
+          modal.classList.add('is-transition');
+          scrollLock.disablePageScroll();
+        }
 
-    function closeModal() {
-      modal.classList.remove('is-visible');
-      scrollLock.enablePageScroll();
-    }
+        function closeModal() {
+          modal.classList.remove('is-visible');
+          modal.classList.remove('is-transition');
+          scrollLock.enablePageScroll();
+        }
 
-    openModal();
+        openModal();
 
-    btnBack.addEventListener('click', closeModal);
+        btnBack.addEventListener('click', closeModal);
 
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        closeModal();
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            closeModal();
+          }
+        });
       }
-    });
+    }
   });
 });
