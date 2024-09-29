@@ -82,8 +82,8 @@ textarea {
     width: 0.25rem;
   }
   &::-webkit-scrollbar-thumb {
-    // background-color: var(--cm);
-    border-radius: 1.25rem;
+    background-color: var(--cm);
+    border-radius: 0;
   }
 }
 
@@ -93,6 +93,9 @@ textarea {
   outline: none;
   border: none;
   font-family: var(--ff);
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
 }
 
 b,

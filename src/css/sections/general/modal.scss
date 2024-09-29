@@ -1,7 +1,3 @@
-body {
-  overflow: hidden;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -18,9 +14,9 @@ body {
   flex-flow: column nowrap;
   background-color: var(--cw);
 
-  // opacity: 0;
-  // visibility: hidden;
-  // pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
   &.is-transition {
     transition: all 0.15s ease-in;
@@ -60,32 +56,6 @@ body {
     width: 100%;
   }
 
-  &__back {
-    position: absolute;
-    top: 3.06rem;
-    left: -2.5rem;
-    color: var(--cs);
-    font-size: 0.875rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    &::before {
-      content: "";
-      font-style: 0;
-      width: 0.375rem;
-      height: 0.75rem;
-      background-size: 0.375rem 0.75rem;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-image: var(--backVector);
-    }
-    &:hover {
-      span {
-        text-decoration: underline;
-      }
-    }
-  }
-
   &__text {
     color: var(--cs);
     line-height: 1.7;
@@ -101,8 +71,42 @@ body {
     margin-top: 3rem;
   }
   &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.9375rem 1.875rem;
   }
   &__label {
+    display: flex;
+    flex-direction: column;
+    p {
+      color: var(--ct);
+      font-size: 0.875rem;
+      line-height: 2;
+      margin-bottom: 0.4375rem;
+      transition: all 0.1s ease-in;
+    }
+    input,
+    textarea {
+      padding: 1.3125rem 1.875rem;
+      border-radius: 0.125rem;
+      border: 0.0625rem solid var(--ct);
+      line-height: 1.75;
+      transition: all 0.1s ease-in;
+      &:hover,
+      &:focus {
+        border-color: var(--cm);
+      }
+    }
+
+    &.is-error {
+      p {
+        color: red;
+      }
+      input,
+      textarea {
+        border-color: red;
+      }
+    }
   }
 
   &__bottom {
@@ -153,9 +157,19 @@ body {
     }
     p {
       line-height: 1.43;
-      flex-wrap: wrap;
+      text-wrap: wrap;
+      transition: all 0.1s ease-in;
       a {
         text-decoration: underline;
+      }
+    }
+
+    &.is-error {
+      p {
+        color: red;
+      }
+      span {
+        border-color: red;
       }
     }
   }
@@ -171,18 +185,160 @@ body {
 
   .tlh3 {
     margin-bottom: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.4;
   }
   .btn-def {
     flex-shrink: 0;
   }
 }
 
+.comeback {
+  position: absolute;
+  z-index: 3;
+  top: 3.06rem;
+  left: 2.5rem;
+  color: var(--cs);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  &::before {
+    content: "";
+    font-style: 0;
+    width: 0.375rem;
+    height: 0.75rem;
+    background-size: 0.375rem 0.75rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: var(--backVector);
+  }
+  &:hover {
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  &__container {
+    position: relative;
+    max-width: 90rem;
+    width: 100%;
+  }
+}
+
+#orderModal {
+  .modal__box {
+    .modal__label {
+      &:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      &:nth-child(2) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      &:nth-child(3) {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .modal {
+    &__body {
+      padding: 11.5rem 0;
+    }
+
+    &__form {
+      margin-top: 1.4375rem;
+    }
+    &__box {
+      gap: 1.375rem 1.125rem;
+    }
+    &__label {
+      input,
+      textarea {
+        padding: 1.3125rem 1.4375rem;
+      }
+    }
+
+    &__bottom {
+      margin-top: 1.8125rem;
+      gap: 2rem;
+    }
+
+    .tlh3 {
+      margin-bottom: 1.3125rem;
+      font-size: 1.5625rem;
+    }
+  }
+
+  .comeback {
+    left: 1.25rem;
   }
 }
 
 @media screen and (max-width: 500px) {
   .modal {
+    &__body {
+      padding: 8.75rem 0;
+    }
+
+    &__text {
+      p {
+        font-size: 0.875rem;
+      }
+    }
+
+    &__form {
+      margin-top: 1.5rem;
+    }
+    &__box {
+      grid-template-columns: 1fr;
+      gap: 1.3125rem;
+    }
+    &__label {
+      input,
+      textarea {
+        padding: 1rem 1.4375rem;
+      }
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: start;
+      margin-top: 1.875rem;
+      gap: 1.875rem;
+    }
+    &__checkbox {
+      p {
+        line-height: 1.64;
+        font-size: 0.875rem;
+      }
+    }
+
+    &__bg {
+      display: none;
+    }
+
+    .tlh3 {
+      margin-bottom: 1rem;
+      font-size: 1.3125rem;
+    }
+  }
+
+  #orderModal {
+    .modal__box {
+      .modal__label {
+        &:nth-child(1) {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+        &:nth-child(2) {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        &:nth-child(3) {
+          grid-area: 3 / 1 / 4 / 2;
+        }
+      }
+    }
   }
 }

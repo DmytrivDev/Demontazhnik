@@ -1,6 +1,9 @@
+import IMask from 'imask';
 import scrollLock from 'scroll-lock';
 
 const btnsOpenModal = document.querySelectorAll('.open-modal');
+
+
 
 btnsOpenModal?.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -8,7 +11,7 @@ btnsOpenModal?.forEach(btn => {
     if (modalId) {
       const modal = document.getElementById(modalId);
       if (modal) {
-        const btnBack = modal.querySelector('.modal__back');
+        const btnBack = modal.querySelector('.comeback');
 
         function openModal() {
           modal.classList.add('is-visible');
@@ -33,5 +36,17 @@ btnsOpenModal?.forEach(btn => {
         });
       }
     }
+  });
+});
+
+const maskOptions = {
+  mask: '+{38} (000) 000 00 00',
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  const telInputs = document.querySelectorAll('input[type="tel"]');
+
+  telInputs.forEach(input => {
+    IMask(input, maskOptions);
   });
 });

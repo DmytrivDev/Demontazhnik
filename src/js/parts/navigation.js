@@ -45,7 +45,7 @@ function closeMenu() {
 
 function disableOverhide() {
   if (window.innerWidth > 960) {
-    scrollLock.enablePageScroll();
+    closeMenu();
   }
 }
 
