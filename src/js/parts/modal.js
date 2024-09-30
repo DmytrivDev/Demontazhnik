@@ -3,8 +3,6 @@ import scrollLock from 'scroll-lock';
 
 const btnsOpenModal = document.querySelectorAll('.open-modal');
 
-
-
 btnsOpenModal?.forEach(btn => {
   btn.addEventListener('click', () => {
     const modalId = btn.dataset.id;
@@ -23,17 +21,21 @@ btnsOpenModal?.forEach(btn => {
           modal.classList.remove('is-visible');
           modal.classList.remove('is-transition');
           scrollLock.enablePageScroll();
+          console.log('Modal closed');
+        }
+
+        if (!modal.dataset.listenerAdded) {
+          btnBack.addEventListener('click', closeModal);
+          document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+              console.log('Escape pressed');
+              closeModal();
+            }
+          });
+          modal.dataset.listenerAdded = 'true';
         }
 
         openModal();
-
-        btnBack.addEventListener('click', closeModal);
-
-        document.addEventListener('keydown', function (event) {
-          if (event.key === 'Escape') {
-            closeModal();
-          }
-        });
       }
     }
   });

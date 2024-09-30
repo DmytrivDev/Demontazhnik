@@ -39,15 +39,15 @@
       }
       &:hover {
         background: rgba(254, 209, 4, 0.05);
-        a {
-          text-decoration: underline;
-        }
       }
       div {
         padding: 1.12rem 1.56rem;
         border-right: 0.0625rem solid var(--ce);
         a {
           cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
         }
         a,
         p {
