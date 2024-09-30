@@ -4,15 +4,19 @@ const header = document.querySelector('.header');
 const burger = document.querySelector('.burger');
 const mobMenu = document.querySelector('.mob');
 const navLinks = document.querySelectorAll('.mob .nav__list a');
+const mobBody = document.querySelector('.mob__body');
 
 let isScrollLocked = false;
 
 function toggleScrollLock() {
   if (isScrollLocked) {
-    scrollLock.enablePageScroll();
+    scrollLock.enablePageScroll(mobBody);
     isScrollLocked = false;
   } else {
-    scrollLock.disablePageScroll();
+    scrollLock.disablePageScroll(mobBody, {
+      reserveScrollBarGap: true,
+    });
+
     isScrollLocked = true;
   }
 }
@@ -40,7 +44,8 @@ function closeMenu() {
   mobMenu.classList.remove('is-opened');
   header.classList.remove('is-opened');
 
-  scrollLock.enablePageScroll();
+  scrollLock.enablePageScroll(mobBody);
+  isScrollLocked = false;
 }
 
 function disableOverhide() {

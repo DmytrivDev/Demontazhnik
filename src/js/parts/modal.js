@@ -14,21 +14,24 @@ btnsOpenModal?.forEach(btn => {
         function openModal() {
           modal.classList.add('is-visible');
           modal.classList.add('is-transition');
-          scrollLock.disablePageScroll();
+
+          scrollLock.disablePageScroll(modal, {
+            reserveScrollBarGap: true,
+          });
         }
 
         function closeModal() {
           modal.classList.remove('is-visible');
           modal.classList.remove('is-transition');
-          scrollLock.enablePageScroll();
-          console.log('Modal closed');
+
+          scrollLock.enablePageScroll(modal);
         }
 
         if (!modal.dataset.listenerAdded) {
           btnBack.addEventListener('click', closeModal);
+
           document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
-              console.log('Escape pressed');
               closeModal();
             }
           });
