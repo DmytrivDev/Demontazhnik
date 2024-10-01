@@ -8,6 +8,7 @@ const mapElement = document.getElementById('map');
 const lat = mapElement.dataset.lat;
 const lng = mapElement.dataset.lng;
 const zoom = mapElement.dataset.zoom;
+const markerIcon = mapElement.dataset.marker;
 
 // Ініціалізація карти з координатами та масштабом з data-атрибутів
 const map = L.map('map').setView([lat, lng], zoom);
@@ -19,7 +20,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 
 // Створення кастомної іконки для маркера
 const customIcon = L.icon({
-  iconUrl: 'https://uaphp.whiterabbitsbox.com.ua/wp-content/themes/uaphp/assets/img/icon_map.svg', // Посилання на твою іконку
+  iconUrl: markerIcon, // Посилання на твою іконку
   iconSize: [26, 44], // Розмір іконки
   iconAnchor: [13, 44], // Точка прив'язки іконки
   popupAnchor: [0, -40], // Точка відкриття попапу (не використовується без попапу)
