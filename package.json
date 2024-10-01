@@ -25,6 +25,7 @@
     "i": "^0.3.7",
     "imask": "^7.6.1",
     "img-comparison-slider": "^8.0.6",
+    "leaflet": "^1.9.4",
     "npm": "^10.7.0",
     "scroll-lock": "^2.1.5",
     "vite-plugin-full-reload": "^1.0.5",
