@@ -19,7 +19,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 
 // Створення кастомної іконки для маркера
 const customIcon = L.icon({
-  iconUrl: './img/icons/icon_map.svg', // Посилання на твою іконку
+  iconUrl: 'https://uaphp.whiterabbitsbox.com.ua/wp-content/themes/uaphp/assets/img/icon_map.svg', // Посилання на твою іконку
   iconSize: [26, 44], // Розмір іконки
   iconAnchor: [13, 44], // Точка прив'язки іконки
   popupAnchor: [0, -40], // Точка відкриття попапу (не використовується без попапу)
