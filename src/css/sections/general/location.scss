@@ -16,6 +16,19 @@
     .leaflet-right {
       display: none;
     }
+    .leaflet-bar {
+      border-radius: 0;
+      border: 0.0625rem solid var(--cm) !important;
+      a {
+        border-color: var(--cm);
+        color: var(--cm);
+        background-color: var(--cy);
+        transition: all 0.15s ease-in;
+      }
+    }
+    .leaflet-control {
+      margin: 0.625rem 0 0 0.625rem !important;
+    }
   }
 
   &__box {
