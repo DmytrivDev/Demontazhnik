@@ -54,10 +54,56 @@
     display: block;
     width: 2.625rem;
     height: 2.625rem;
+    transition: all 0.15s ease-in;
+    border: 0.0625rem solid transparent;
     img {
       object-fit: cover;
     }
+    &:hover {
+      -webkit-box-shadow: 0 0.125rem 0.3125rem -0.0625rem rgba(66, 68, 90, 1);
+      -moz-box-shadow: 0 0.125rem 0.3125rem -0.0625rem rgba(66, 68, 90, 1);
+      box-shadow: 0 0.125rem 0.3125rem -0.0625rem rgba(66, 68, 90, 1);
+      border: 0.0625rem solid var(--cm);
+    }
   }
+  // li {
+  //   &:nth-child(1) {
+  //     a {
+  //       &:hover {
+  //         -webkit-box-shadow: 0 0.125rem 0.3125rem -0.0625rem rgba(8, 102, 255, 1);
+  //         -moz-box-shadow: 0 0.125rem 0.3125rem -0.0625rem rgba(8, 102, 255, 1);
+  //         box-shadow: 0 0.125rem 0.3125rem -0.0625rem rgba(8, 102, 255, 1);
+  //       }
+  //     }
+  //   }
+  //   &:nth-child(2) {
+  //     a {
+  //       &:hover {
+  //         -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 1);
+  //         -moz-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 1);
+  //         box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 1);
+  //       }
+  //     }
+  //   }
+  //   &:nth-child(3) {
+  //     a {
+  //       &:hover {
+  //         -webkit-box-shadow: 0px 2px 5px -1px rgba(255, 0, 0, 1);
+  //         -moz-box-shadow: 0px 2px 5px -1px rgba(255, 0, 0, 1);
+  //         box-shadow: 0px 2px 5px -1px rgba(255, 0, 0, 1);
+  //       }
+  //     }
+  //   }
+  //   &:nth-child(4) {
+  //     a {
+  //       &:hover {
+  //         -webkit-box-shadow: 0px 2px 5px -1px rgba(255, 0, 92, 1);
+  //         -moz-box-shadow: 0px 2px 5px -1px rgba(255, 0, 92, 1);
+  //         box-shadow: 0px 2px 5px -1px rgba(255, 0, 92, 1);
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .splide {
@@ -186,9 +232,24 @@
 }
 
 .workcard {
+  &:hover {
+    .workcard__img {
+      box-shadow: 0 0.25rem 0.75rem 0 rgba(11, 11, 11, 0.24);
+      a {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+    }
+  }
   &__img {
-    position: relative;
-    padding-top: 100%;
+    overflow: hidden;
+    transition: all 0.15s ease-in;
+    a {
+      display: block;
+      position: relative;
+      padding-top: 100%;
+      transition: all 0.15s ease-in;
+    }
   }
 
   &__info {

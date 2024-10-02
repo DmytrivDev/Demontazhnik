@@ -41,7 +41,8 @@
 
     &__box {
       display: flex;
-      align-items: center;
+      align-items: start;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: 1.25rem;
       background-color: var(--cq);
@@ -61,10 +62,11 @@
       }
     }
     &__lang {
+      margin-top: 0.2rem;
       display: flex;
-      justify-content: end;
+      justify-content: start;
       flex-wrap: wrap;
-      gap: 0.5rem 1.31rem;
+      gap: 1rem 1.31rem;
 
       a {
         display: flex;
@@ -97,7 +99,7 @@
       }
     }
     &__lang {
-      gap: 0.5rem 1.2rem;
+      gap: 1rem 1.2rem;
     }
   }
 }

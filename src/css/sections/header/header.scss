@@ -82,6 +82,7 @@
       transition: all 0.15s ease-in;
       img {
         width: 1.0625rem;
+        height: 0.78925rem;
         flex-shrink: 0;
       }
     }
@@ -104,19 +105,18 @@
       position: absolute;
       z-index: 2;
       top: 100%;
-      left: 0;
-      right: 0;
+      left: -0.5rem;
       transform: translateY(0.5rem);
       background-color: var(--cw);
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: calc(100% + 1rem);
       transition: all 0.15s ease-in;
       li {
         a {
-          padding: 0.5rem 0;
+          padding: 0.5rem;
           &:hover {
-            opacity: 0.5;
+            opacity: 0.7;
           }
         }
       }

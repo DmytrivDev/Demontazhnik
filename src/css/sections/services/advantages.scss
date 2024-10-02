@@ -1,8 +1,5 @@
 .advantages {
-  overflow: hidden;
-
   &__container {
-    position: relative;
   }
   &__body {
     position: relative;
@@ -105,15 +102,6 @@
     width: 0.9375rem;
     height: 0.9375rem;
   }
-
-  &__bg {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 960px) {
@@ -151,10 +139,6 @@
     }
     &__cards {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    &__bg {
-      display: none;
     }
   }
 }
