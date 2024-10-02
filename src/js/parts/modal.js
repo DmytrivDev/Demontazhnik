@@ -1,48 +1,58 @@
 import IMask from 'imask';
 import scrollLock from 'scroll-lock';
 
-const btnsOpenModal = document.querySelectorAll('.open-modal');
+const activeModals = new Set();
 
-btnsOpenModal?.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const modalId = btn.dataset.id;
-    if (modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        const btnBack = modal.querySelector('.comeback');
+function showModal(modal) {
+  modal.classList.add('isOpened', 'isAnimation');
+  scrollLock.disablePageScroll(modal, { reserveScrollBarGap: true });
+  activeModals.add(modal);
+}
 
-        function openModal() {
-          modal.classList.add('is-visible');
-          modal.classList.add('is-transition');
+export function closeModal(modal) {
+  modal.classList.remove('isOpened', 'isAnimation');
+  scrollLock.enablePageScroll(modal);
+  activeModals.delete(modal);
+}
 
-          scrollLock.disablePageScroll(modal, {
-            reserveScrollBarGap: true,
-          });
-        }
+function initModal(modal) {
+  const btnClose = modal.querySelector('.closeModal');
 
-        function closeModal() {
-          modal.classList.remove('is-visible');
-          modal.classList.remove('is-transition');
+  if (btnClose) {
+    btnClose.addEventListener('click', () => closeModal(modal));
+  }
 
-          scrollLock.enablePageScroll(modal);
-        }
-
-        if (!modal.dataset.listenerAdded) {
-          btnBack.addEventListener('click', closeModal);
-
-          document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-              closeModal();
-            }
-          });
-          modal.dataset.listenerAdded = 'true';
-        }
-
-        openModal();
-      }
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeModal(modal);
     }
   });
-});
+}
+
+export function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    if (!modal.dataset.listenerAdded) {
+      initModal(modal);
+      modal.dataset.listenerAdded = 'true';
+    }
+    showModal(modal);
+  }
+}
+
+function initOpenModalButtons() {
+  const btnsOpenModal = document.querySelectorAll('.openModal');
+  btnsOpenModal?.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.dataset.id;
+      if (modalId) {
+        openModal(modalId);
+      }
+    });
+  });
+}
+
+initOpenModalButtons();
 
 const maskOptions = {
   mask: '+{38} (000) 000 00 00',
