@@ -63,9 +63,9 @@
       &::after {
         content: "";
         flex-shrink: 0;
-        width: 0.75rem;
-        height: 0.75rem;
-        background-size: 0.75rem 0.75rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        background-size: 0.7rem 0.7rem;
         background-position: center center;
         background-repeat: no-repeat;
         background-image: var(--langVector);
@@ -91,6 +91,9 @@
       .sub-menu {
         visibility: visible;
         opacity: 1;
+        -webkit-box-shadow: 0px 8px 9px -7px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 0px 8px 9px -7px rgba(66, 68, 90, 1);
+        box-shadow: 0px 8px 9px -7px rgba(66, 68, 90, 1);
       }
       & > li > a {
         &::after {
@@ -116,7 +119,7 @@
         a {
           padding: 0.5rem;
           &:hover {
-            opacity: 0.7;
+            color: var(--cu);
           }
         }
       }

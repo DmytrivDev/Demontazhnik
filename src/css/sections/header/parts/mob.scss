@@ -54,6 +54,7 @@
         text-wrap: nowrap;
         font-size: 0.9375rem;
         line-height: normal;
+        font-weight: 500;
         .lang-part1 {
         }
         .lang-part2 {
@@ -74,9 +75,13 @@
         gap: 0.75rem;
         font-size: 0.75rem;
         line-height: normal;
+        transition: all 0.15s ease-in;
         img {
           width: 1.0625rem;
           height: 0.78925rem;
+        }
+        &:hover {
+          color: var(--cu);
         }
       }
     }

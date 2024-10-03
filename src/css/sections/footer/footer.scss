@@ -93,9 +93,6 @@
     filter: brightness(0) saturate(100%) invert(99%) sepia(4%) saturate(312%)
       hue-rotate(130deg) brightness(118%) contrast(100%);
   }
-  .def-soc {
-    justify-content: space-between;
-  }
 }
 
 @media screen and (max-width: 960px) {
