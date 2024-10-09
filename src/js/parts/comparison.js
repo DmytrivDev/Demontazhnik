@@ -24,3 +24,7 @@ const updateImageHeights = () => {
 document.addEventListener('DOMContentLoaded', updateImageHeights);
 
 window.addEventListener('resize', updateImageHeights);
+
+document.addEventListener('facetwp-loaded', function () {
+  updateImageHeights();
+});

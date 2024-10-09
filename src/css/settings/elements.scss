@@ -48,6 +48,7 @@
   padding: 1.44rem 1.88rem;
   background-color: var(--cy);
   transition: all 0.15s ease-in;
+  font-family: var(--ff);
   &::after {
     content: "";
     flex-shrink: 0;
