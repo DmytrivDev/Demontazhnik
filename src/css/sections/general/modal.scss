@@ -94,8 +94,7 @@
       border: 0.0625rem solid var(--ct);
       line-height: 1.75;
       transition: all 0.1s ease-in;
-      &:hover,
-      &:focus {
+      &:hover {
         border-color: var(--cm);
       }
     }

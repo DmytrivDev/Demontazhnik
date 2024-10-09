@@ -4,5 +4,6 @@ import './parts/comparison';
 import './parts/accordion';
 import './parts/modal';
 import './parts/map';
+import './parts/form';
 
 initMenu();
